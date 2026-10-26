@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#1663ae">
+<title>سُلّم الأبطال | الترتيب التنازلي من ٩ إلى ٠</title>
+<style>
+:root {--deep:#124b87;--ink:#173d61;--blue:#37aaf2;--pink:#ff639b;--yellow:#ffd64e;--mint:#32c7ae}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,"Noto Sans Arabic",Arial,sans-serif;min-height:100vh;color:var(--ink);background:linear-gradient(135deg,#ddf4ff 0%,#f8faff 52%,#e3f8f1 100%)}
+button{font-family:inherit;touch-action:manipulation;cursor:pointer}button:focus-visible{outline:4px solid #ffb627;outline-offset:3px}
+.page{max-width:1130px;margin:auto;padding:14px 20px 22px}
+.header{background:linear-gradient(120deg,#0f63b2,#1b88ce 70%,#47bdc8);border-radius:25px;box-shadow:0 9px 0 #b7e0f7,0 15px 25px #1a689c18;color:white;padding:17px 20px 16px;position:relative;overflow:hidden}
+.header::after{content:'✦   ✨   ✦';position:absolute;top:7px;left:20px;font-size:22px;opacity:.8}
+.kicker{color:#d5faff;font-weight:bold;font-size:14px;letter-spacing:.1px}.header h1{font-size:clamp(26px,3.6vw,41px);margin:3px 0 5px;color:#fff4ab}.header p{font-size:clamp(14px,2vw,18px);margin:3px 0;line-height:1.6}
+.grid{display:grid;grid-template-columns:minmax(310px,1.05fr) minmax(285px,.95fr);gap:20px;align-items:start;margin-top:21px}
+.stair-card{border:3px solid white;background:linear-gradient(160deg,#f5fdff,#f0f9ff 52%,#fff8df);border-radius:26px;box-shadow:0 11px 26px #316c9a1e;padding:10px 12px 14px;overflow:hidden}
+.stair-heading{margin:1px 10px 3px;display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:bold;color:#1566a6}
+.step-counter{background:white;border:1px solid #afddf9;border-radius:30px;padding:5px 12px;font-size:14px}
+.stage{height:553px;position:relative;width:100%;min-width:0;overflow:hidden;border-radius:18px;background:radial-gradient(circle at 12% 14%,#fffee6 0%,transparent 22%),linear-gradient(#e0f5ff 0%,#fbfeff 84%,#d7f2c2 100%);border:2px solid #d6effc;--shift:24px}
+.stage::before{content:'☁️';position:absolute;top:24px;left:7%;font-size:30px;opacity:.8}.stage::after{content:'🌼 🌿';position:absolute;bottom:5px;right:8px;font-size:20px;opacity:.8}
+.step{position:absolute;right:calc(12px + var(--i) * var(--shift));top:calc(31px + var(--i) * 48px);width:clamp(125px,33%,165px);height:43px;border:2px solid var(--edge);border-bottom-width:5px;background:linear-gradient(180deg,#fff 0%,var(--shade) 100%);color:#274969;border-radius:12px 12px 5px 5px;box-shadow:0 6px 0 #a8d2d6,0 8px 7px #22527617;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;z-index:2;transition:background .2s,border .2s,transform .18s;user-select:none;touch-action:manipulation}
+.step::before{content:'';position:absolute;right:100%;top:13px;width:calc(var(--shift) - 4px);height:23px;background:linear-gradient(180deg,#d8e0e7,#abbacd);z-index:-1;border-bottom:3px solid #96abc4;opacity:.55}
+.step::after{content:'';position:absolute;inset:5px 8px auto auto;height:7px;width:20px;border-radius:8px;background:#ffffffc9;transform:rotate(-7deg);pointer-events:none}
+.step.empty{color:#adc8d3}.step.filled{color:#193c66;background:linear-gradient(#fff8d3,#fff1a1)}.step.wrong{background:#ffe4ea;border-color:#eb4d70;color:#a8164f;animation:shake .25s linear 2}
+@keyframes shake{25%{transform:translateX(5px)}75%{transform:translateX(-5px)}}
+.start-flag{position:absolute;right:18px;top:4px;z-index:4;border-radius:14px;background:#fff7bc;border:1px solid #ffe08b;padding:4px 10px;font-size:13px;font-weight:900;color:#805700}
+.finish-flag{position:absolute;left:13px;bottom:8px;z-index:3;background:#ffffffd9;border-radius:13px;padding:5px 8px;font-size:13px;font-weight:bold;border:1px solid #bfeecf}
+.mascot{position:absolute;right:180px;top:28px;z-index:5;font-size:38px;line-height:1;filter:drop-shadow(0 3px 3px #9d7c2980);pointer-events:none;animation:bob 2s ease-in-out infinite;transform:translate3d(0,0,0)}
+@keyframes bob{50%{transform:translateY(-5px) rotate(8deg)}}
+.mascot.descend{animation:none;transition:top .38s cubic-bezier(.2,.8,.2,1),right .38s cubic-bezier(.2,.8,.2,1),transform .38s ease}
+.mascot.hop{transform:translateY(-18px) rotate(17deg)}
+.panel{background:white;border-radius:26px;border:3px solid #ebf5ff;box-shadow:0 11px 28px #2877a023;padding:18px;min-height:580px;display:flex;flex-direction:column}
+.panel h2{margin:0 0 5px;color:#13619e;font-size:24px}.panel .sub{color:#57758e;line-height:1.9;margin:0 0 12px;font-size:15px}
+.status{background:#e9f8ff;border:2px solid #afe4ff;color:#15577f;border-radius:14px;min-height:60px;padding:12px 10px;font-size:17px;line-height:1.6;font-weight:bold;display:flex;align-items:center;justify-content:center;text-align:center}
+.progress-label{display:flex;justify-content:space-between;font-size:14px;color:#496982;margin-top:12px;font-weight:700}.progress{height:12px;background:#d9eaf5;border-radius:20px;overflow:hidden;margin:6px 0 6px}.bar{height:100%;width:0%;background:linear-gradient(90deg,#1ccfa2,#45abe9);border-radius:20px;transition:width .35s}
+.tiles{direction:rtl;display:grid;grid-template-columns:repeat(5,1fr);gap:11px;margin:20px 0 23px}.tile{height:66px;font-size:33px;font-weight:900;border-radius:15px;border:3px solid #fff4d4;color:#19456e;background:linear-gradient(150deg,#ffefb5,#ffc565);box-shadow:0 6px 0 #dc9538,0 7px 12px #aa723024;transition:transform .12s,opacity .15s}.tile:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 #dc9538}.tile:disabled{opacity:.2;cursor:default;box-shadow:none}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:9px}.action{border-radius:14px;border:none;padding:13px 16px;font-size:16px;font-weight:bold;min-height:53px;flex:1 1 145px;color:white;background:linear-gradient(#169a76,#087f6c);box-shadow:0 4px 0 #036654}.action.alt{background:#ebf4ff;color:#275886;border:2px solid #c4e1fc;box-shadow:0 4px 0 #b6d5ee}.action:active{transform:translateY(3px);box-shadow:none}.action:disabled{opacity:.56;cursor:default}
+.audio{margin-top:15px;background:transparent;color:#476c84;border:1px solid #cbdce6;padding:8px;border-radius:12px;align-self:center;font-weight:bold}.note{color:#617e8e;font-size:13px;line-height:1.8;margin:14px 0 0}.footer{text-align:center;color:#5d7c95;margin:15px 0;font-size:14px}
+.celebrate{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:20}.confetti{position:absolute;top:-35px;font-size:29px;animation:rain var(--d) ease-in forwards;will-change:transform;left:var(--x)}@keyframes rain{100%{transform:translateY(110vh) rotate(650deg);opacity:0}}
+@media(max-width:690px){.page{padding:9px 10px 22px}.grid{grid-template-columns:1fr;gap:12px}.panel{min-height:0}.stage{height:546px;--shift:clamp(12px,5vw,24px)}.stair-card{padding:8px 8px 12px}.step{width: min(39%,170px)}.mascot{right:172px}.tiles{max-width:530px;margin:15px auto 19px;width:100%}.header{padding:12px 13px}}
+@media(max-width:370px){.stage{--shift:14px}.step{width:132px}.mascot{right:138px}.tile{height:57px;font-size:29px}.panel{padding:12px}.header h1{font-size:26px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="header">
+<div class="kicker">⭐ تحدي الحساب • لعبة تفاعلية</div>
+<h1>🪜 سُلّم الأبطال</h1>
+<p>رتّب الأرقام <strong>تنازليًا من ٩ إلى ٠</strong>، من أعلى السلم إلى أسفله، ثم شاهد نجمتك تنزل السلم!</p>
+</header>
+<main class="grid">
+<section class="stair-card" aria-label="سلم الأعداد">
+<div class="stair-heading"><span>🌈 سُلّم الأعداد</span><span class="step-counter" id="filled" aria-live="polite">٠ من ١٠</span></div>
+<div class="stage" id="stage">
+<div class="start-flag">🚩 البداية من الأعلى</div>
+<div class="finish-flag">🏁 خط النهاية</div>
+<div class="mascot" id="mascot" aria-hidden="true">🌟</div>
+<div id="steps"></div>
+</div>
+</section>
+<section class="panel">
+<h2>🎯 اختر الأرقام</h2>
+<p class="sub">اضغط على الأرقام المبعثرة لتعبئة الدرجات، بدءًا من <strong>الدرجة العليا</strong>. ويمكنك الضغط على أي درجة لإزالة رقمها.</p>
+<div class="status" id="status" aria-live="polite">هيا نبدأ! ما أكبر عدد نضعه أعلى السلم؟</div>
+<div class="progress-label"><span>الدرجات المكتملة</span><span id="progressText">٠ / ١٠</span></div>
+<div class="progress"><div class="bar" id="bar"></div></div>
+<div class="tiles" id="tiles" aria-label="بطاقات الأعداد المبعثرة"></div>
+<div class="actions">
+<button class="action" type="button" id="check">🌟 ابدأ النزول!</button>
+<button class="action alt" type="button" id="reset">↻ لعبة جديدة</button>
+</div>
+<button class="audio" type="button" id="audio">🔊 المؤثرات تعمل</button>
+<p class="note">💡 عند وجود خطأ، تتلوّن الدرجات التي تحتاج تعديلًا. اضغط عليها ثم اختر الرقم الصحيح، دون أن تعيد ترتيب السلم كله.</p>
+</section>
+</main>
+<footer class="footer">إعداد وتصميم: أ. وصال الخنبشية • مهارة ترتيب الأعداد تنازليًا (٠–٩)</footer>
+</div><div class="celebrate" id="celebrate" aria-hidden="true"></div>
+<script>
+'use strict';
+const ASC=['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+const TARGET=[...ASC].reverse();
+const stepsEl=document.getElementById('steps'), tilesEl=document.getElementById('tiles');
+const statusEl=document.getElementById('status'), progressEl=document.getElementById('progressText'), barEl=document.getElementById('bar'), filledEl=document.getElementById('filled');
+const mascotEl=document.getElementById('mascot'), stageEl=document.getElementById('stage'), audioBtn=document.getElementById('audio');
+let arranged=Array(10).fill(null), shuffled=[], wrong=new Set(), muted=false, locked=false, audioCtx=null, runId=0;
+const colors=[['#0da8ce','#ddf7ff'],['#fb5892','#ffe5ef'],['#a16ae8','#f0e7ff'],['#f6a433','#fff1d9'],['#15bb97','#dcfbf0'],['#4f91e9','#e5f1ff'],['#fa6480','#ffe6eb'],['#899c31','#f2facf'],['#9e67cf','#f5e5ff'],['#00a9b5','#d9f8fa']];
+function shuffle(){let a=[...ASC];do{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}}while(a.every((x,i)=>x===TARGET[i]));return a}
+function audio(){if(muted)return null;try{audioCtx??=new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();return audioCtx}catch{return null}}
+function tone(freq=600,dur=.15,volume=.09,type='sine',at=0){const c=audio();if(!c)return;const t=c.currentTime+at,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(freq,t);g.gain.setValueAtTime(.001,t);g.gain.linearRampToValueAtTime(volume,t+.018);g.gain.exponentialRampToValueAtTime(.001,t+dur);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+dur+.02)}
+function soundStep(i){tone(430+i*35,.14,.1,'triangle');tone(660+i*23,.16,.035,'sine',.06)}
+function winSound(){[523,659,784,988,1175].forEach((n,i)=>tone(n,.39,.1,'sine',i*.14))}
+function render(){stepsEl.replaceChildren();arranged.forEach((val,i)=>{const btn=document.createElement('button');btn.type='button';btn.className='step '+(val===null?'empty':'filled')+(wrong.has(i)?' wrong':'');btn.style.setProperty('--i',i);btn.style.setProperty('--edge',colors[i][0]);btn.style.setProperty('--shade',colors[i][1]);btn.textContent=val===null?'؟':val;btn.disabled=locked;btn.setAttribute('aria-label',`الدرجة ${i+1} من أعلى السلم: ${val??'فارغة'}`);btn.title='اضغط لإزالة الرقم';btn.addEventListener('click',()=>{if(locked||arranged[i]===null)return;arranged[i]=null;wrong.clear();tone(330,.11,.07);statusEl.textContent='اختَر رقمًا جديدًا لتصحيح الدرجة.';render()});stepsEl.append(btn)});
+ tilesEl.replaceChildren();shuffled.forEach((val)=>{const b=document.createElement('button');b.className='tile';b.type='button';b.textContent=val;b.disabled=locked||arranged.includes(val);b.setAttribute('aria-label','الرقم '+val);b.addEventListener('click',()=>{if(locked)return;const pos=arranged.indexOf(null);if(pos===-1)return;arranged[pos]=val;wrong.clear();tone(520+pos*39,.13,.09,'triangle');if(!arranged.includes(null))statusEl.textContent='أكملت السلم! اضغط «ابدأ النزول» للتحقق.';else statusEl.textContent='أحسنت على المحاولة! اختر العدد الذي يأتي بعده.';render()});tilesEl.append(b)});
+ const done=arranged.filter(x=>x!==null).length;const displayCount=done===10?'١٠':ASC[done];progressEl.textContent=displayCount+' / ١٠';filledEl.textContent=displayCount+' من ١٠';barEl.style.width=done*10+'%';}
+function pause(ms){return new Promise(r=>setTimeout(r,ms))}
+function launchStars(){const layer=document.getElementById('celebrate');for(let i=0;i<55;i++){const s=document.createElement('span');s.className='confetti';s.textContent=['⭐','✨','🌟','🎉','💛'][i%5];s.style.setProperty('--x',Math.random()*100+'%');s.style.setProperty('--d',(2.2+Math.random()*2)+'s');s.style.animationDelay=Math.random()*.8+'s';layer.append(s);setTimeout(()=>s.remove(),4900)}}
+function stepCoordinates(i){const el=stepsEl.children[i],boardRect=stageEl.getBoundingClientRect(),r=el.getBoundingClientRect();return {top:r.top-boardRect.top+2, right:boardRect.right-r.right+r.width+12}}
+async function animateDown(){const id=++runId;locked=true;render();mascotEl.classList.add('descend');statusEl.textContent='🌟 ممتاز! ترتيبك صحيح، هيا ننزل السلم!';launchStars();for(let i=0;i<10;i++){if(runId!==id)return;const p=stepCoordinates(i);mascotEl.style.top=(p.top-1)+'px';mascotEl.style.right=(p.right)+'px';mascotEl.classList.add('hop');soundStep(i);await pause(440);mascotEl.classList.remove('hop');await pause(160)}if(runId!==id)return;winSound();statusEl.textContent='🏆 رائع! نزلت السلم من ٩ إلى ٠ بنجاح!';launchStars()}
+document.getElementById('check').addEventListener('click',()=>{if(locked)return;if(arranged.includes(null)){statusEl.textContent='أكمل ترتيب الأرقام العشرة أولًا 🌟';tone(250,.25,.09,'triangle');return}wrong=new Set(arranged.map((v,i)=>v===TARGET[i]?-1:i).filter(i=>i>=0));if(wrong.size){statusEl.textContent='اقتربت! الدرجات الوردية تحتاج إلى تصحيح. اضغط عليها لتبديل الأرقام.';tone(240,.26,.08,'triangle');render()}else animateDown()});
+document.getElementById('reset').addEventListener('click',()=>{runId++;locked=false;arranged=Array(10).fill(null);wrong.clear();shuffled=shuffle();mascotEl.classList.remove('descend','hop');mascotEl.style.top='28px';mascotEl.style.right='180px';statusEl.textContent='هيا نبدأ! ما أكبر عدد نضعه أعلى السلم؟';render();tone(540,.13,.09)});
+audioBtn.addEventListener('click',()=>{muted=!muted;audioBtn.textContent=muted?'🔇 المؤثرات متوقفة':'🔊 المؤثرات تعمل';if(!muted)tone(740,.12,.07)});
+shuffled=shuffle();render();
+</script>
+</body>
+</html>
